@@ -15,7 +15,7 @@ struct home: View {
             VStack{
                 CalendarView()
                 mealsDetails()
-                Image("bg").resizable().frame(width: 500, height: 500)
+                Image("bg").resizable().frame(width: 500, height: 500).opacity(0.2)
                     .padding(.top, -20)
             }.padding(.top, 150)
         }

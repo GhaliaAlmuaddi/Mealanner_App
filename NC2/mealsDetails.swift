@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct mealsDetails: View {
+    @AppStorage("Breakfast") var breakfast = ""
+    @AppStorage("lunch") var lunch = ""
+    @AppStorage("dinnewr") var dinnwer = ""
+    @AppStorage("snack") var snack = ""
+    
     var body: some View {
         ZStack{
             Color("lColor")
@@ -18,64 +23,75 @@ struct mealsDetails: View {
                 .foregroundColor(.white)
                 .cornerRadius(30)
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+            
             VStack{
                 
+                Image(systemName: "square.and.pencil").resizable().frame(width: 28, height: 28).padding(.bottom, -30).padding(.leading, 250).padding(.top, -20)
+                    .foregroundColor(Color(.blue))
+                //Breakfast
                 HStack() {
                     Image("breakfast").resizable()
                         .frame(width: 38, height: 38)
                     VStack(alignment: .leading) {
                         Text("Breakfast")
-                            .font(.title2)
                             .fontWeight(.semibold)
                             .foregroundColor(Color("gColor"))
-                            
-                        Text("hhhhjjdfggdd")
-                            .frame(width: 180 , alignment: .leading  )
-                            .font(.title2)
+                        
+                        TextField("Type your breakfast", text: $breakfast)
+                            .frame(width: 240 , height: 0, alignment: .leading  )
                             .fontWeight(.regular)
                             .foregroundColor(Color("bColor"))
-                            
+                        
                     }
-                }
-//                .alignmentGuide(.leading) { dimension in
-//                    dimension[.leading]
-//                }
-                
-                
-//                HStack() {
-//                    Image("lunch")
-//                        .resizable()
-//                        .frame(width: 38, height: 38)
-//                    
-//                    VStack(alignment: .leading) {
-//                        Text("Lunch")
-//                            .font(.title2)
-//                            .fontWeight(.semibold)
-//                            .foregroundColor(Color("gColor"))
-//                            .fixedSize(horizontal: true, vertical: true)
-//                        
-//                        Text("Lunch")
-//                            .font(.title2)
-//                            .fontWeight(.regular)
-//                            .foregroundColor(Color("bColor"))
-//                            .fixedSize(horizontal: true, vertical: true)
-//                    }
-//                }
-//                .alignmentGuide(.leading) { dimension in
-//                    dimension[.leading]
-//                }
-//                HStack{
-//                    Image("dinner").resizable().frame(width: 38, height: 38)
-//                    VStack{
-//                        Text(" Dinner").font(.title2).fontWeight(.semibold).foregroundColor(Color("gColor"))
-//                        
-//                        Text("Dinner").font(.title2).foregroundColor(Color("bColor"))
-//                    }
-//                }/*.offset(x: -78, y:-10)*/
+                }.padding(.bottom, 17)
+                //Lunch
+                HStack() {
+                    Image("lunch").resizable()
+                        .frame(width: 38, height: 38)
+                    VStack(alignment: .leading) {
+                        Text("Lunch")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("gColor"))
+                        
+                        TextField("Type your lunch", text: $lunch)
+                            .frame(width: 240 , height: 0, alignment: .leading  )
+                            .fontWeight(.regular)
+                            .foregroundColor(Color("bColor"))
+                        
+                    }
+                }.padding(.bottom, 17)
+                //Dinner
+                HStack() {
+                    Image("dinner").resizable()
+                        .frame(width: 38, height: 38)
+                    VStack(alignment: .leading) {
+                        Text("Dinner")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("gColor"))
+                        TextField("Type your dinner", text: $dinnwer)
+                            .frame(width: 240 , height: 0, alignment: .leading  )
+                            .fontWeight(.regular)
+                            .foregroundColor(Color("bColor"))
+                    }
+                }.padding(.bottom, 17)
+                HStack() {
+                    Image("snack").resizable()
+                        .frame(width: 38, height: 38).padding(.top, 10)
+                    VStack(alignment: .leading) {
+                        Text("Snack")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("gColor"))
+//                        TextField("Type your snacks", text: $snack)
+                        TextField("Address", text: $snack, axis: .vertical)
+                            .frame(width: 240, alignment: .leading).padding(.top, -12)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color("bColor"))
+                        
+                    }
+                }.padding(.top, 10)
             }
             Divider().frame(width: 270, height: 0.4)
-                .overlay(Color("bColor")).padding(.top, 200)
-            
+                .overlay(Color("bColor")).padding(.top, 140)
         }
     }
 }
