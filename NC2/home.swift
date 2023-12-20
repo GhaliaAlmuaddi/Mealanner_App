@@ -14,7 +14,7 @@ struct home: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 CalendarView()
-                mealsDetails()
+                MealsDetails()
                 Image("bg").resizable().frame(width: 500, height: 500).opacity(0.2)
                     .padding(.top, -20)
             }.padding(.top, 150)

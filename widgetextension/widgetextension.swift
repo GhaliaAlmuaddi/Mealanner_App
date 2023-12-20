@@ -14,14 +14,42 @@ import SwiftUI
 struct Provider: TimelineProvider {
     //create a snapshot with data
     
+    @AppStorage(
+        "breakfast",
+        store: UserDefaults(
+            suiteName: "group.a.NC2"
+        )
+    ) private var breakfast = ""
+    
+    @AppStorage(
+        "lunch",
+        store: UserDefaults(
+            suiteName: "group.a.NC2"
+        )
+    ) private var lunch = ""
+    
+    @AppStorage(
+        "dinner",
+        store: UserDefaults(
+            suiteName: "group.a.NC2"
+        )
+    ) private var dinner = ""
+    
+    @AppStorage(
+        "snack",
+        store: UserDefaults(
+            suiteName: "group.a.NC2"
+        )
+    ) private var snack = ""
+    
     let data = DataService()
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), streak: data.progress())
+        SimpleEntry(date: Date(), breakfast: breakfast, lunch: lunch, dinner: dinner, snack: snack)
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), streak: data.progress())
+        let entry = SimpleEntry(date: Date(), breakfast: breakfast, lunch: lunch, dinner: dinner, snack: snack)
         completion(entry)
     }
     
@@ -32,7 +60,14 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, streak: data.progress())
+            
+            //MARK: HERE
+            let breakfast = breakfast
+            let lunch = lunch
+            let dinner = dinner
+            let snack = snack
+            
+            let entry = SimpleEntry(date: entryDate, breakfast: breakfast, lunch: lunch, dinner: dinner, snack: snack)
             entries.append(entry)
         }
         
@@ -43,7 +78,10 @@ struct Provider: TimelineProvider {
 //data
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let streak: Int
+    let breakfast: String
+    let lunch: String
+    let dinner: String
+    let snack: String
 }
 
 struct widgetextensionEntryView : View {
@@ -53,24 +91,21 @@ struct widgetextensionEntryView : View {
     //UI
     var body: some View {
         ZStack {
-            Circle()
-                .stroke(Color.white.opacity(0.1), lineWidth: 20)
-            //change the progress
-            let pct = Double(data.progress())/50.0
-            Circle()
-                .trim(from: 0, to: pct)
-                .stroke(.blue, style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                .rotationEffect(.degrees(-90))
+            Color("lColor")
+                .edgesIgnoringSafeArea(.all)
             
-            VStack{
-                Text(String(data.progress())).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .bold()
-            }.foregroundStyle(.white)
-                .fontDesign(.rounded)
+//            Rectangle()
+//                .frame(width: 331, height: 333)
+//                .foregroundColor(Color("lColor"))
+//                .cornerRadius(30)
+//                .shadow(radius: 10)
+            Text(data.getBreakfast())
+           
+            VStack {
+            }
             
         }.padding()
-        .containerBackground(.black, for: .widget)
-        
+        .containerBackground(.white, for: .widget)
     }
 }
 
@@ -84,7 +119,7 @@ struct widgetextension: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
                 widgetextensionEntryView(entry: entry)// background color
-                    .containerBackground(.black, for: .widget)
+                    .containerBackground(.white, for: .widget)
             } else {
                 widgetextensionEntryView(entry: entry)
                     .padding()
@@ -102,6 +137,6 @@ struct widgetextension: Widget {
 #Preview(as: .systemSmall) {
     widgetextension()
 } timeline: {
-    SimpleEntry(date: .now, streak: 1)
-    SimpleEntry(date: .now, streak: 4)
+    SimpleEntry(date: .now, breakfast: "", lunch: "", dinner: "", snack: "")
+    SimpleEntry(date: .now, breakfast: "", lunch: "", dinner: "", snack: "")
 }
