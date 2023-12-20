@@ -29,7 +29,8 @@ struct mealsDetails: View {
                             .fontWeight(.semibold)
                             .foregroundColor(Color("gColor"))
                             
-                        Text("Breakfast")
+                        Text("hhhhjjdfggdd")
+                            .frame(width: 180 , alignment: .leading  )
                             .font(.title2)
                             .fontWeight(.regular)
                             .foregroundColor(Color("bColor"))
