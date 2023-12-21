@@ -12,7 +12,7 @@ struct CalendarView: View {
                     Image(systemName: "chevron.left")
                         .font(.title)
                         .foregroundColor(Color("bColor"))
-                }
+                } .accessibilityLabel("left arrow")
                 
                 Text("\(currentDate, formatter: DateFormatter.fullDate)")
                     .font(.title)
@@ -24,8 +24,8 @@ struct CalendarView: View {
                     Image(systemName: "chevron.right")
                         .font(.title)
                         .foregroundColor(Color("bColor"))
-                }
-            }
+                }       .accessibilityLabel("right arrow")
+            }.ignoresSafeArea(.keyboard)
             .padding()
             
         }

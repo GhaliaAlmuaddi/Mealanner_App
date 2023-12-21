@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372C1B152B3439E200B008F2 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1B142B3439E200B008F2 /* view.swift */; };
 		379166A72B320F2A00D99B62 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379166A62B320F2A00D99B62 /* CalendarView.swift */; };
 		379F709E2B309AA500F872A5 /* NC2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F709D2B309AA500F872A5 /* NC2App.swift */; };
 		379F70A02B309AA500F872A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F709F2B309AA500F872A5 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		372C1B142B3439E200B008F2 /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		379166A62B320F2A00D99B62 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		379F709A2B309AA500F872A5 /* NC2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379F709D2B309AA500F872A5 /* NC2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2App.swift; sourceTree = "<group>"; };
@@ -114,8 +116,9 @@
 				379F70C42B30BBDF00F872A5 /* NC2.entitlements */,
 				379F709D2B309AA500F872A5 /* NC2App.swift */,
 				379F709F2B309AA500F872A5 /* ContentView.swift */,
-				379166A62B320F2A00D99B62 /* CalendarView.swift */,
 				379F70D02B320B1100F872A5 /* home.swift */,
+				379166A62B320F2A00D99B62 /* CalendarView.swift */,
+				372C1B142B3439E200B008F2 /* view.swift */,
 				379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */,
 				379F70A12B309AA600F872A5 /* Assets.xcassets */,
 				379F70A32B309AA600F872A5 /* Preview Content */,
@@ -257,6 +260,7 @@
 				379F70CD2B31E5DD00F872A5 /* mealsDetails.swift in Sources */,
 				379F70A02B309AA500F872A5 /* ContentView.swift in Sources */,
 				379F70D12B320B1100F872A5 /* home.swift in Sources */,
+				372C1B152B3439E200B008F2 /* view.swift in Sources */,
 				379F709E2B309AA500F872A5 /* NC2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

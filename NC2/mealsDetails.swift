@@ -10,6 +10,7 @@ import SwiftUI
 import WidgetKit
 
 struct MealsDetails: View {
+    
     @AppStorage(
         "breakfast",
         store: UserDefaults(
@@ -53,9 +54,7 @@ struct MealsDetails: View {
             
             VStack {
                 Button(action: {
-                    print("Button Tapped...")
                     isButtonClicked.toggle()
-                    
                     WidgetCenter.shared.reloadTimelines(ofKind:"widgetextension")
                 }) {
                     if isButtonClicked {
@@ -65,6 +64,7 @@ struct MealsDetails: View {
                             .foregroundColor(.blue)
                             .padding(.top, -20)
                             .padding(.leading, 235)
+                            .accessibilityLabel("Done")
                     } else {
                         Image(systemName: "square.and.pencil")
                             .resizable()
@@ -74,6 +74,7 @@ struct MealsDetails: View {
                             .cornerRadius(8)
                             .foregroundColor(.white)
                             .padding(.top, -20)
+                            .accessibilityLabel("Edit")
                     }
                 }.padding(.bottom, -25)
 
@@ -88,6 +89,8 @@ struct MealsDetails: View {
                         TextField("Type your breakfast", text: $breakfast)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked)).disabled(!isButtonClicked)
                             .padding(.top, -14)
+                            .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
+                            .ignoresSafeArea(.keyboard)
                     }
                 }.padding(.bottom, 5)
                 
@@ -102,6 +105,8 @@ struct MealsDetails: View {
                         TextField("Type your lunch", text: $lunch)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked))   
                             .disabled(!isButtonClicked).padding(.top, -14)
+                            .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
+                            .ignoresSafeArea(.keyboard)
                     }
                 }.padding(.bottom, 5)
                 
@@ -115,6 +120,8 @@ struct MealsDetails: View {
                         TextField("Type your dinner", text: $dinner)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked))   
                             .disabled(!isButtonClicked).padding(.top, -14)
+                            .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
+                            .ignoresSafeArea(.keyboard)
                     }
                 }.padding(.bottom, 5)
                 
@@ -126,8 +133,11 @@ struct MealsDetails: View {
                             .fontWeight(.semibold)
                             .foregroundColor(Color("gColor"))
                         TextField("Type your snacks", text: $snack)
+                            .ignoresSafeArea(.keyboard)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked)).disabled(!isButtonClicked)
                             .padding(.top, -14)
+                            .accessibilityLabel((!isButtonClicked && (snack != "")) ? "Click edit button to" : "")
+                        
                     }
                 }.padding(.top, 10)
             }

@@ -9,13 +9,7 @@ import Foundation
 import SwiftUI
 
 struct DataService{
-    @AppStorage(
-        "streak",
-        store: UserDefaults(
-            suiteName: "group.a.NC2"
-        )
-    ) private var streak = 0
-    
+   
     @AppStorage(
         "breakfast",
         store: UserDefaults(
@@ -44,9 +38,6 @@ struct DataService{
         )
     ) private var snack = ""
     
-    func log(){
-        streak += 10
-    }
     func getBreakfast() -> String{
         return breakfast
     }

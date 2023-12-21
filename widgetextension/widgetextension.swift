@@ -87,25 +87,69 @@ struct SimpleEntry: TimelineEntry {
 struct widgetextensionEntryView : View {
     var entry: Provider.Entry
     
+    var date: Date {
+         return Date()
+     }
+
+     var dayName: String {
+         let calendar = Calendar.current
+         let dayOfWeek = calendar.component(.weekday, from: date)
+         return calendar.weekdaySymbols[dayOfWeek - 1]
+     }
+    
     let data = DataService()
+    
     //UI
     var body: some View {
         ZStack {
-            Color("lColor")
-                .edgesIgnoringSafeArea(.all)
+            Color(.white) //"lColor"
+            HStack{
+                VStack{
+                    HStack {
+                        Text("Breackfast:").font(.system(size: 17))
+                            .foregroundColor(Color("gColor")).padding(.leading, -42).padding(.top, -35).fontWeight(.semibold)
+                        
+                        Text(data.getBreakfast()).frame(width: 150, alignment: .leading).font(.system(size: 15))
+                            .foregroundColor(Color("bColor")).padding(.top, -35)
+                    }
+                    HStack {
+                        Text("Lunch:").font(.system(size: 17))
+                            .foregroundColor(Color("gColor")).padding(.leading, -74).padding(.top, -20).fontWeight(.semibold)
+                        
+                        Text(data.getLunch()).frame(width: 150, alignment: .leading).padding(.leading,-17)
+                            .font(.system(size: 15))
+                            .foregroundColor(Color("bColor"))
+                            .padding(.top, -20)
+                    }
+                    HStack {
+                        Text("Dinner:").font(.system(size: 17))
+                            .foregroundColor(Color("gColor")).padding(.leading, -72).padding(.top, -5).fontWeight(.semibold)
+                        
+                        Text(data.getDinner()).frame(width: 150, alignment: .leading).padding(.leading,-15)
+                            .font(.system(size: 15))
+                            .foregroundColor(Color("bColor"))
+                            .padding(.top, -5)
+                    }.padding(.bottom, 0)
+                        
+                    Divider().frame(width: 130, height: 0.3)
+                        .overlay(Color("bColor")).padding(.bottom, 17).padding(.leading, -150)
+
+                    HStack {
+                        Text("Snacks:").font(.system(size: 17))
+                            .foregroundColor(Color("gColor")).padding(.leading, -72).padding(.top, -15).fontWeight(.semibold)
+                        
+                        Text(data.getSnack()).frame(width: 150, alignment: .leading).padding(.leading,-13)
+                            .font(.system(size: 15))
+                            .foregroundColor(Color("bColor"))
+                            .padding(.top, -15)
+                    }
+                }
+            }.padding(.top, 25)
+                .containerBackground(Color("lColor"), for: .widget)
+                .ignoresSafeArea()
             
-//            Rectangle()
-//                .frame(width: 331, height: 333)
-//                .foregroundColor(Color("lColor"))
-//                .cornerRadius(30)
-//                .shadow(radius: 10)
-            Text(data.getBreakfast())
-           
-            VStack {
-            }
-            
-        }.padding()
-        .containerBackground(.white, for: .widget)
+            Image("bg").resizable().frame(width: 220, height: 230, alignment: .leading).opacity(0.2).padding(.leading, 280).padding(.top, 30)
+        }
     }
 }
 
@@ -119,7 +163,7 @@ struct widgetextension: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
                 widgetextensionEntryView(entry: entry)// background color
-                    .containerBackground(.white, for: .widget)
+                    .containerBackground(Color("lColor"), for: .widget)
             } else {
                 widgetextensionEntryView(entry: entry)
                     .padding()

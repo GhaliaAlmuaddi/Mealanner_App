@@ -10,17 +10,28 @@ import SwiftUI
 struct home: View {
     var body: some View {
         ZStack{
+            
             Color("lColor")
                 .edgesIgnoringSafeArea(.all)
+           
             VStack{
-                CalendarView()
-                MealsDetails()
-                Image("bg").resizable().frame(width: 500, height: 500).opacity(0.2)
-                    .padding(.top, -20)
-            }.padding(.top, 150)
+                ScrollView{
+                    CalendarView()
+                    // view()
+                    MealsDetails()
+                        .ignoresSafeArea(.keyboard)
+                    Image("bg").resizable().frame(width: 450, height: 450).opacity(0.2)
+                        .padding(.top, -20).padding(.bottom, -80)
+                }//.padding(.top, 150)
+            }
+//                .ignoresSafeArea(.keyboard)
+            }/*.ignoresSafeArea(.keyboard)*/
         }
     }
-}
+//}
+
+
+
 
 #Preview {
     home()
