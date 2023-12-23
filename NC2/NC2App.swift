@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-
+import SwiftData
 @main
 struct NC2App: App {
     var body: some Scene {
         WindowGroup {
-            home()
+            CalendarView().modelContainer(for: [MealsModel.self])
         }
     }
 }

@@ -22,6 +22,7 @@
 		379F70C72B30C8BD00F872A5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F70C62B30C8BD00F872A5 /* DataService.swift */; };
 		379F70CD2B31E5DD00F872A5 /* mealsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */; };
 		379F70D12B320B1100F872A5 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F70D02B320B1100F872A5 /* home.swift */; };
+		90D21D752B35B3B6009F3FF1 /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D21D742B35B3B6009F3FF1 /* MealsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		379F70C62B30C8BD00F872A5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealsDetails.swift; sourceTree = "<group>"; };
 		379F70D02B320B1100F872A5 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
+		90D21D742B35B3B6009F3FF1 /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		379F709C2B309AA500F872A5 /* NC2 */ = {
 			isa = PBXGroup;
 			children = (
+				90B4AB862B3746CB00927E47 /* Model */,
 				379F70C42B30BBDF00F872A5 /* NC2.entitlements */,
 				379F709D2B309AA500F872A5 /* NC2App.swift */,
 				379F709F2B309AA500F872A5 /* ContentView.swift */,
@@ -153,6 +156,14 @@
 				379F70BC2B30ACA300F872A5 /* Info.plist */,
 			);
 			path = widgetextension;
+			sourceTree = "<group>";
+		};
+		90B4AB862B3746CB00927E47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90D21D742B35B3B6009F3FF1 /* MealsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 				379F70D12B320B1100F872A5 /* home.swift in Sources */,
 				372C1B152B3439E200B008F2 /* view.swift in Sources */,
 				379F709E2B309AA500F872A5 /* NC2App.swift in Sources */,
+				90D21D752B35B3B6009F3FF1 /* MealsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
