@@ -41,7 +41,7 @@
 //                    streak += 1
 //                    
 //                    // manually reload the widget
-//                    WidgetCenter.shared.reloadTimelines(ofKind:"widgetextension")
+                  //  WidgetCenter.shared.reloadTimelines(ofKind:"widgetextension")
 //                }, label: {
 //                    ZStack{
 //                        RoundedRectangle(cornerRadius: 20)

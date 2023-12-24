@@ -29,17 +29,13 @@ struct MealsDetails: View {
     
     @State private var isButtonClicked = false
     @State private var Show_Flage = true
+    @State private var data_flage = true
     
     
     @Query var Meals : [MealsModel]
     
     var body: some View {
         
-        //        @AppStorage("storedMeals") var storedMealsData: Data?
-        //
-        //            @State var meals: [MealsModel] = []
-        //    modelContext.delete(model : MealsModel.self)
-        //
         ZStack {
             Color("lColor")
                 .edgesIgnoringSafeArea(.all)
@@ -51,15 +47,13 @@ struct MealsDetails: View {
                 .shadow(radius: 10)
             
             
-            
             VStack {
-                
                 
                 Button(action: {
                     // Action for the "Edit" button
                   
                     Show_Flage = false
-                    isButtonClicked = true
+                    isButtonClicked.toggle()
 
                     // WidgetCenter.shared.reloadTimelines(ofKind: "widgetextension")
                     
@@ -79,7 +73,7 @@ struct MealsDetails: View {
                 
                 if isButtonClicked {
                     Button(action: {
-                        // Action for the "Done" button
+          // Action for the "Done" button
                        
                         
                         save()
@@ -96,13 +90,14 @@ struct MealsDetails: View {
                             .accessibilityLabel("Done")
                     }
                 }
-                    
-                    if Show_Flage { // هنا بيعرض البيانات المطابقه للتاريخ
+                let lastMeal = Meals.last(where: { Calendar.current.compare($0.MealDay, to: currentDate2, toGranularity: .day) == .orderedSame })
+                
+                if (Show_Flage && (lastMeal != nil)) { // هنا بيعرض البيانات المطابقه للتاريخ
                         //Text("\(currentDate2)")
                         //  ForEach(Meals.filter { $0.MealDay == currentDate2 }) { meal in
                         
-                        if let lastMeal = Meals.last(where: { Calendar.current.compare($0.MealDay, to: currentDate2, toGranularity: .day) == .orderedSame }) {
-                            
+//                        if let lastMeal = Meals.last(where: { Calendar.current.compare($0.MealDay, to: currentDate2, toGranularity: .day) == .orderedSame }) {
+//                            
                             
                             
                             // Text("\(meal.MealDay)")
@@ -113,7 +108,7 @@ struct MealsDetails: View {
                                     Text("Breakfast")
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("gColor"))
-                                    Text(" \(lastMeal.breakfast)")
+                                    Text(" \(lastMeal!.breakfast)")
                                  //.textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked)).disabled(!isButtonClicked)
                                         .padding(.top, -14)
                                      .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
@@ -131,7 +126,7 @@ struct MealsDetails: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("gColor"))
                                
-                                    Text(lastMeal.lunch)
+                                    Text(lastMeal!.lunch)
                                  
                                         .padding(.top, -14)
                                         .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
@@ -146,7 +141,7 @@ struct MealsDetails: View {
                                     Text("Dinner")
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("gColor"))
-                                    Text(lastMeal.dinner)
+                                    Text(lastMeal!.dinner)
                                   
                                         .padding(.top, -14)
                                         .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
@@ -161,7 +156,7 @@ struct MealsDetails: View {
                                     Text("Snack")
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("gColor"))
-                                    Text(lastMeal.snack)
+                                    Text(lastMeal!.snack)
                                     
                                    
                                         .padding(.top, -14).ignoresSafeArea(.keyboard)
@@ -170,13 +165,13 @@ struct MealsDetails: View {
                                 }
                             }.padding(.top, 10)
                           
-                        } //end of if for the calender condition
-                        else {
-                            
-                            // Handle the case where no matching meal is found
-                            Text("No meal available for the selected date")
-                            
-                        } //End of elase
+                        //} //end of if for the calender condition
+//                        else {
+//                            
+//                            // Handle the case where no matching meal is found
+//                            Text("No meal available for the selected date")
+//                            
+//                        } //End of elase
                         
                     } //end of Show_Flage
                     
