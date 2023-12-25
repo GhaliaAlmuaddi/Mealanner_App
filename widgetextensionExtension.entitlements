@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.a.NC2</string>
+		<string>group.Mealanner</string>
 	</array>
 </dict>
 </plist>

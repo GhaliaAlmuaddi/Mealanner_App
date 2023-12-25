@@ -17,28 +17,28 @@ struct Provider: TimelineProvider {
     @AppStorage(
         "breakfast",
         store: UserDefaults(
-            suiteName: "group.a.NC2"
+            suiteName: "group.Mealanner"
         )
     ) private var breakfast = ""
     
     @AppStorage(
         "lunch",
         store: UserDefaults(
-            suiteName: "group.a.NC2"
+            suiteName: "group.Mealanner"
         )
     ) private var lunch = ""
     
     @AppStorage(
         "dinner",
         store: UserDefaults(
-            suiteName: "group.a.NC2"
+            suiteName: "group.Mealanner"
         )
     ) private var dinner = ""
     
     @AppStorage(
         "snack",
         store: UserDefaults(
-            suiteName: "group.a.NC2"
+            suiteName: "group.Mealanner"
         )
     ) private var snack = ""
     
