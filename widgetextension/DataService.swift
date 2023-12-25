@@ -13,28 +13,28 @@ struct DataService{
     @AppStorage(
         "breakfast",
         store: UserDefaults(
-            suiteName: "group.Mealanner"
+            suiteName: "group.a.NC2"
         )
     ) private var breakfast = ""
     
     @AppStorage(
         "lunch",
         store: UserDefaults(
-            suiteName: "group.Mealanner"
+            suiteName: "group.a.NC2"
         )
     ) private var lunch = ""
     
     @AppStorage(
         "dinner",
         store: UserDefaults(
-            suiteName: "group.Mealanner"
+            suiteName: "group.a.NC2"
         )
     ) private var dinner = ""
     
     @AppStorage(
         "snack",
         store: UserDefaults(
-            suiteName: "group.Mealanner"
+            suiteName: "group.a.NC2"
         )
     ) private var snack = ""
     
