@@ -1,10 +1,10 @@
-////
-////  mealsDetails.swift
-////  NC2
-////
-////  Created by Lujain Abdullah Halabi Almeri on 06/06/1445 AH.
-////
 //
+//  mealsDetails.swift
+//  NC2
+//
+//  Created by Lujain Abdullah Halabi Almeri on 06/06/1445 AH.
+//
+
 
 import SwiftUI
 import WidgetKit
@@ -48,7 +48,7 @@ struct MealsDetails: View {
             
             Rectangle()
                 .frame(width: 331, height: 333)
-                .foregroundColor(.white)
+                .foregroundColor(Color("wColor"))
                 .cornerRadius(30)
                 .shadow(radius: 10)
             
@@ -89,7 +89,7 @@ struct MealsDetails: View {
                         TextField("Type your breakfast", text: $breakfast)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked)).disabled(!isButtonClicked)
                             .padding(.top, -14)
-                            .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
+                            .accessibilityLabel((!isButtonClicked && breakfast == "") ? "Click edit button to" : "")
                             .ignoresSafeArea(.keyboard)
                     }
                 }.padding(.bottom, 5)
@@ -105,7 +105,7 @@ struct MealsDetails: View {
                         TextField("Type your lunch", text: $lunch)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked))
                             .disabled(!isButtonClicked).padding(.top, -14)
-                            .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
+                            .accessibilityLabel((!isButtonClicked && lunch == "") ? "Click edit button to" : "")
                             .ignoresSafeArea(.keyboard)
                     }
                 }.padding(.bottom, 5)
@@ -120,7 +120,7 @@ struct MealsDetails: View {
                         TextField("Type your dinner", text: $dinner)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked))
                             .disabled(!isButtonClicked).padding(.top, -14)
-                            .accessibilityLabel(!isButtonClicked ? "Click edit button to" : "")
+                            .accessibilityLabel((!isButtonClicked && dinner == "") ? "Click edit button to" : "")
                             .ignoresSafeArea(.keyboard)
                     }
                 }.padding(.bottom, 5)
@@ -136,7 +136,7 @@ struct MealsDetails: View {
                             .ignoresSafeArea(.keyboard)
                             .textFieldStyle(CustomTextFieldStyle(isButtonClicked: isButtonClicked)).disabled(!isButtonClicked)
                             .padding(.top, -14)
-                            .accessibilityLabel((!isButtonClicked && (snack != "")) ? "Click edit button to" : "")
+                            .accessibilityLabel((!isButtonClicked && snack == "") ? "Click edit button to" : "")
                         
                     }
                 }.padding(.top, 10)

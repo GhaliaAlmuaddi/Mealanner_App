@@ -102,51 +102,46 @@ struct widgetextensionEntryView : View {
     //UI
     var body: some View {
         ZStack {
-            Color(.white) //"lColor"
+           Color("wColor")
             HStack{
-                VStack{
+                VStack(alignment: .leading){
                     HStack {
                         Text("Breackfast:").font(.system(size: 17))
-                            .foregroundColor(Color("gColor")).padding(.leading, -42).padding(.top, -35).fontWeight(.semibold)
+                            .foregroundColor(Color("gColor")).fontWeight(.semibold)
                         
                         Text(data.getBreakfast()).frame(width: 150, alignment: .leading).font(.system(size: 15))
-                            .foregroundColor(Color("bColor")).padding(.top, -35)
-                    }
+                            .foregroundColor(Color("bColor"))
+                    }.padding(.bottom, 5)
                     HStack {
                         Text("Lunch:").font(.system(size: 17))
-                            .foregroundColor(Color("gColor")).padding(.leading, -74).padding(.top, -20).fontWeight(.semibold)
+                            .foregroundColor(Color("gColor")).fontWeight(.semibold)
                         
-                        Text(data.getLunch()).frame(width: 150, alignment: .leading).padding(.leading,-17)
+                        Text(data.getLunch()).frame(width: 150, alignment: .leading)
                             .font(.system(size: 15))
                             .foregroundColor(Color("bColor"))
-                            .padding(.top, -20)
-                    }
+                    }.padding(.bottom, 5)
                     HStack {
                         Text("Dinner:").font(.system(size: 17))
-                            .foregroundColor(Color("gColor")).padding(.leading, -72).padding(.top, -5).fontWeight(.semibold)
+                            .foregroundColor(Color("gColor")).fontWeight(.semibold)
                         
-                        Text(data.getDinner()).frame(width: 150, alignment: .leading).padding(.leading,-15)
+                        Text(data.getDinner()).frame(width: 150, alignment: .leading)
                             .font(.system(size: 15))
                             .foregroundColor(Color("bColor"))
-                            .padding(.top, -5)
                     }.padding(.bottom, 0)
                         
                     Divider().frame(width: 130, height: 0.3)
-                        .overlay(Color("bColor")).padding(.bottom, 17).padding(.leading, -150)
+                        .overlay(Color("bColor")).padding(.bottom, 5).padding(.leading, 0)
 
                     HStack {
-                       // Text("Snacks:").font(.system(size: 17))
-
                         Text(NSLocalizedString("Snacks:", bundle: .main, comment: "")).font(.system(size: 17))
-                            .foregroundColor(Color("gColor")).padding(.leading, -72).padding(.top, -15).fontWeight(.semibold)
+                            .foregroundColor(Color("gColor")).fontWeight(.semibold)
                         
-                        Text(data.getSnack()).frame(width: 150, alignment: .leading).padding(.leading,-13)
+                        Text(data.getSnack()).frame(width: 150, alignment: .leading)
                             .font(.system(size: 15))
                             .foregroundColor(Color("bColor"))
-                            .padding(.top, -15)
                     }
                 }
-            }.padding(.top, 25)
+            }.padding(.top, 3).padding(.leading, -25)
                 .containerBackground(Color("lColor"), for: .widget)
                 .ignoresSafeArea()
             

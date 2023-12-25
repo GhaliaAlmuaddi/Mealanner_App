@@ -9,12 +9,6 @@ import Foundation
 import SwiftUI
 
 struct DataService{
-//    @AppStorage(
-//        "modelOfMeal",
-//        store: UserDefaults(
-//            suiteName: "group.a.NC2"
-//        )
-//    ) private var modelOfMeal : MealsModel
     
     @AppStorage(
         "breakfast",

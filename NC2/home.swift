@@ -13,22 +13,18 @@ struct home: View {
             
             Color("lColor")
                 .edgesIgnoringSafeArea(.all)
-           
             VStack{
                 ScrollView{
                     CalendarView()
-                    // view()
                     MealsDetails()
                         .ignoresSafeArea(.keyboard)
                     Image("bg").resizable().frame(width: 450, height: 450).opacity(0.2)
-                        .padding(.top, -20).padding(.bottom, -80)
-                }//.padding(.top, 150)
+                        .padding(.top, -20).padding(.bottom, -80).accessibilityLabel("Background")
+                }
             }
-//                .ignoresSafeArea(.keyboard)
-            }/*.ignoresSafeArea(.keyboard)*/
         }
     }
-//}
+}
 
 
 

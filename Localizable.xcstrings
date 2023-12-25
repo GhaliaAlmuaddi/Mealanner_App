@@ -131,12 +131,15 @@
         }
       }
     },
+    "Background" : {
+
+    },
     "Breackfast:" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الإفطار"
+            "value" : "الإفطار:"
           }
         }
       }
@@ -176,7 +179,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "العشاء"
+            "value" : "العشاء:"
           }
         }
       }
@@ -207,6 +210,9 @@
     "Key 1" : {
       "extractionState" : "manual"
     },
+    "Let Mlanner's widget simplify your day of vitality with your meal planner." : {
+
+    },
     "Lunch" : {
       "localizations" : {
         "ar" : {
@@ -222,7 +228,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الغذاء"
+            "value" : "الغذاء:"
           }
         }
       }
@@ -255,6 +261,9 @@
           }
         }
       }
+    },
+    "Stay remembered" : {
+
     },
     "This is a mealanner widget to remind you for your daily meals." : {
 
@@ -298,6 +307,12 @@
           }
         }
       }
+    },
+    "Welcome to Mealanner" : {
+
+    },
+    "Your hub for healthy meals.\n Plan and savor the wellness!" : {
+
     }
   },
   "version" : "1.0"
