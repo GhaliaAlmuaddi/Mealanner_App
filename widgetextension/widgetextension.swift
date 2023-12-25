@@ -135,7 +135,9 @@ struct widgetextensionEntryView : View {
                         .overlay(Color("bColor")).padding(.bottom, 17).padding(.leading, -150)
 
                     HStack {
-                        Text("Snacks:").font(.system(size: 17))
+                       // Text("Snacks:").font(.system(size: 17))
+
+                        Text(NSLocalizedString("Snacks:", bundle: .main, comment: "")).font(.system(size: 17))
                             .foregroundColor(Color("gColor")).padding(.leading, -72).padding(.top, -15).fontWeight(.semibold)
                         
                         Text(data.getSnack()).frame(width: 150, alignment: .leading).padding(.leading,-13)
@@ -170,15 +172,15 @@ struct widgetextension: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Mealanner widget")
+        .description("This is a mealanner widget to remind you for your daily meals.")
         
         // added
         .supportedFamilies([.systemMedium])
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview(as: .systemMedium) {
     widgetextension()
 } timeline: {
     SimpleEntry(date: .now, breakfast: "", lunch: "", dinner: "", snack: "")

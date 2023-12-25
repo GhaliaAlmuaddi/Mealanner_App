@@ -224,7 +224,7 @@
         }
       }
     },
-    "My Widget" : {
+    "Mealanner widget" : {
 
     },
     "Snack" : {
@@ -247,7 +247,7 @@
         }
       }
     },
-    "This is an example widget." : {
+    "This is a mealanner widget to remind you for your daily meals." : {
 
     },
     "Type your breakfast" : {
@@ -255,7 +255,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ادخل وجبة الفطور"
+            "value" : "ادخل وجبة الإفطار"
           }
         }
       }
