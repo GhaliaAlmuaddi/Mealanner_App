@@ -22,6 +22,7 @@
 		379F70D12B320B1100F872A5 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F70D02B320B1100F872A5 /* home.swift */; };
 		6B332DE92B383709003C21EB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6B332DE82B383709003C21EB /* Localizable.xcstrings */; };
 		6B332DEA2B383709003C21EB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6B332DE82B383709003C21EB /* Localizable.xcstrings */; };
+		905AE3E82B39723200F058E7 /* OnBordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AE3E72B39723200F058E7 /* OnBordingView.swift */; };
 		90D21D752B35B3B6009F3FF1 /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D21D742B35B3B6009F3FF1 /* MealsModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealsDetails.swift; sourceTree = "<group>"; };
 		379F70D02B320B1100F872A5 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 		6B332DE82B383709003C21EB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		905AE3E72B39723200F058E7 /* OnBordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBordingView.swift; sourceTree = "<group>"; };
 		90D21D742B35B3B6009F3FF1 /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */,
 				379F70A12B309AA600F872A5 /* Assets.xcassets */,
 				379F70A32B309AA600F872A5 /* Preview Content */,
+				905AE3E72B39723200F058E7 /* OnBordingView.swift */,
 			);
 			path = NC2;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				379166A72B320F2A00D99B62 /* CalendarView.swift in Sources */,
 				379F70CD2B31E5DD00F872A5 /* mealsDetails.swift in Sources */,
 				379F70D12B320B1100F872A5 /* home.swift in Sources */,
+				905AE3E82B39723200F058E7 /* OnBordingView.swift in Sources */,
 				379F709E2B309AA500F872A5 /* NC2App.swift in Sources */,
 				90D21D752B35B3B6009F3FF1 /* MealsModel.swift in Sources */,
 			);

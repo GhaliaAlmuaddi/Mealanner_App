@@ -201,6 +201,9 @@
         }
       }
     },
+    "Get started" : {
+
+    },
     "Key 1" : {
       "extractionState" : "manual"
     },
@@ -225,6 +228,12 @@
       }
     },
     "Mealanner widget" : {
+
+    },
+    "Next" : {
+
+    },
+    "Skip" : {
 
     },
     "Snack" : {
