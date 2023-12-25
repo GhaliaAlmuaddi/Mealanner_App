@@ -136,7 +136,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الفطور"
+            "value" : "الإفطار"
           }
         }
       }
@@ -146,7 +146,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الفطور"
+            "value" : "الإفطار"
           }
         }
       }
@@ -156,7 +156,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إضغط زر التحرير للإضافة أو الحذف"
+            "value" : "اضغط زر التحرير للإضافة "
           }
         }
       }
@@ -209,7 +209,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الغداء"
+            "value" : "الغذاء"
           }
         }
       }
@@ -219,7 +219,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الغداء"
+            "value" : "الغذاء"
           }
         }
       }
@@ -232,7 +232,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الوجبات الخفيفه"
+            "value" : "الوجبات الخفيفة"
           }
         }
       }
@@ -255,7 +255,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "أدخل وجبة الفطور"
+            "value" : "ادخل وجبة الفطور"
           }
         }
       }
@@ -265,7 +265,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "أدخل وجبة العشاء"
+            "value" : "ادخل وجبة العشاء"
           }
         }
       }
@@ -275,7 +275,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "أدخل وجبة الغداء"
+            "value" : "ادخل وجبة الغذاء"
           }
         }
       }
@@ -285,7 +285,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "أدخل الوجبات الخفيفة"
+            "value" : "ادخل الوجبات الخفيفة"
           }
         }
       }
