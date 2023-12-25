@@ -53,7 +53,7 @@ import SwiftUI
                             HStack {
                                 ForEach(0..<onBording_set.count, id: \.self) { item in
                                     if (item == current) {
-                                        Rectangle().frame(width: 20, height: 10).cornerRadius(10).foregroundColor((Color("gColor")))
+                                        Rectangle().frame(width: 20, height: 10).cornerRadius(10).foregroundColor(.blue/*(Color("gColor"))*/)
                                     }
                                     else {
                                         Circle().frame(width: 10, height: 10).foregroundColor(.gray)
@@ -78,20 +78,17 @@ import SwiftUI
                                 }
                                 
                             }){
-//                                NavigationLink(
-//                                        destination: DestinationView().navigationBarBackButtonHidden(true)
-//                                    ) {
                                         Text(current < onBording_set.count - 1 ? "Next" : "Get started")
                                             .padding(16)
                                             .frame(width: 250)
-                                            .background(Color("gColor"))
+                                            .background(.blue /*Color("gColor")*/)
                                             .cornerRadius(16)
                                             .padding(.horizontal, 16)
                                             .foregroundColor(.white)
                                     } .background(NavigationLink("", destination: home().navigationBarBackButtonHidden(true), isActive: $isActive))
-                        }
-                            
                         }.offset(y : -30)
+                            
+                        }
                     }
                     
                 }

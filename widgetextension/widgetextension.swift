@@ -168,7 +168,7 @@ struct widgetextension: Widget {
             }
         }
         .configurationDisplayName(String(NSLocalizedString("Mealanner widget", bundle: .main, comment: "")))
-        .description(String(NSLocalizedString("Mealanner, where meal planning is just a click away.", bundle: .main, comment: "")))
+        .description(String(NSLocalizedString("Where meals planning is just a click away!", bundle: .main, comment: "")))
         
         // added
         .supportedFamilies([.systemMedium])
