@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		372C1B152B3439E200B008F2 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1B142B3439E200B008F2 /* view.swift */; };
 		379166A72B320F2A00D99B62 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379166A62B320F2A00D99B62 /* CalendarView.swift */; };
 		379F709E2B309AA500F872A5 /* NC2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F709D2B309AA500F872A5 /* NC2App.swift */; };
 		379F70A22B309AA600F872A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379F70A12B309AA600F872A5 /* Assets.xcassets */; };
@@ -21,6 +20,8 @@
 		379F70C72B30C8BD00F872A5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F70C62B30C8BD00F872A5 /* DataService.swift */; };
 		379F70CD2B31E5DD00F872A5 /* mealsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */; };
 		379F70D12B320B1100F872A5 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F70D02B320B1100F872A5 /* home.swift */; };
+		6B332DE92B383709003C21EB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6B332DE82B383709003C21EB /* Localizable.xcstrings */; };
+		6B332DEA2B383709003C21EB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6B332DE82B383709003C21EB /* Localizable.xcstrings */; };
 		90D21D752B35B3B6009F3FF1 /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D21D742B35B3B6009F3FF1 /* MealsModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +50,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		372C1B142B3439E200B008F2 /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		379166A62B320F2A00D99B62 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		379F709A2B309AA500F872A5 /* NC2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379F709D2B309AA500F872A5 /* NC2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2App.swift; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		379F70C62B30C8BD00F872A5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealsDetails.swift; sourceTree = "<group>"; };
 		379F70D02B320B1100F872A5 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
+		6B332DE82B383709003C21EB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		90D21D742B35B3B6009F3FF1 /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +94,7 @@
 		379F70912B309AA500F872A5 = {
 			isa = PBXGroup;
 			children = (
+				6B332DE82B383709003C21EB /* Localizable.xcstrings */,
 				379F70C52B30BC4400F872A5 /* widgetextensionExtension.entitlements */,
 				379F709C2B309AA500F872A5 /* NC2 */,
 				379F70B52B30ACA100F872A5 /* widgetextension */,
@@ -118,7 +120,6 @@
 				379F709D2B309AA500F872A5 /* NC2App.swift */,
 				379F70D02B320B1100F872A5 /* home.swift */,
 				379166A62B320F2A00D99B62 /* CalendarView.swift */,
-				372C1B142B3439E200B008F2 /* view.swift */,
 				379F70CC2B31E5DD00F872A5 /* mealsDetails.swift */,
 				379F70A12B309AA600F872A5 /* Assets.xcassets */,
 				379F70A32B309AA600F872A5 /* Preview Content */,
@@ -227,6 +228,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 379F70912B309AA500F872A5;
 			productRefGroup = 379F709B2B309AA500F872A5 /* Products */;
@@ -246,6 +248,7 @@
 			files = (
 				379F70A52B309AA600F872A5 /* Preview Assets.xcassets in Resources */,
 				379F70A22B309AA600F872A5 /* Assets.xcassets in Resources */,
+				6B332DE92B383709003C21EB /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B332DEA2B383709003C21EB /* Localizable.xcstrings in Resources */,
 				379F70BB2B30ACA300F872A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +271,6 @@
 				379166A72B320F2A00D99B62 /* CalendarView.swift in Sources */,
 				379F70CD2B31E5DD00F872A5 /* mealsDetails.swift in Sources */,
 				379F70D12B320B1100F872A5 /* home.swift in Sources */,
-				372C1B152B3439E200B008F2 /* view.swift in Sources */,
 				379F709E2B309AA500F872A5 /* NC2App.swift in Sources */,
 				90D21D752B35B3B6009F3FF1 /* MealsModel.swift in Sources */,
 			);
