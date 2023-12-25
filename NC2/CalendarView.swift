@@ -32,23 +32,23 @@ struct CalendarView: View {
     }
 }
 
-//extension DateFormatter {
-//    static var fullDate: DateFormatter {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "d MMMM yyyy"
-//        
-//        return formatter
-//    }
-//}
-
 extension DateFormatter {
     static var fullDate: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMMM yyyy"
-        formatter.locale = Locale.current // Set the locale to the user's current locale
+        formatter.dateFormat = "d MMMM yyyy"
+        
         return formatter
     }
 }
+
+//extension DateFormatter {
+//    static var fullDate: DateFormatter {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "dd MMMM yyyy"
+//        formatter.locale = Locale.current // Set the locale to the user's current locale
+//        return formatter
+//    }
+//}
 
 
 struct CalendarView_Previews: PreviewProvider {
