@@ -8,7 +8,7 @@
 import SwiftUI
 
         struct OnBordingView: View {
-            @State var current = 1
+            @State var current = 0
             //@State var Show_sheet : Bool
            init(){
                 UIScrollView.appearance().bounces = false
@@ -29,10 +29,10 @@ import SwiftUI
                                     self.current = onBording_set.count-1
                                     
                                     //هنا نخليه يدخل التطبيق مباشرة
-                                    
-                                    
+
                                 }){
                                     Text("Skip").padding(14).foregroundColor(.blue)
+                                        .offset(x: -25, y: 30)
                                 }}
                             TabView(selection: $current) {
                                 ForEach(0..<onBording_set.count, id: \.self) { item in
