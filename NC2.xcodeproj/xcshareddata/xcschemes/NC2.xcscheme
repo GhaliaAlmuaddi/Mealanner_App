@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "379F70992B309AA500F872A5"
-               BuildableName = "NC2.app"
+               BuildableName = "Mealanner.app"
                BlueprintName = "NC2"
                ReferencedContainer = "container:NC2.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "379F70992B309AA500F872A5"
-            BuildableName = "NC2.app"
+            BuildableName = "Mealanner.app"
             BlueprintName = "NC2"
             ReferencedContainer = "container:NC2.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "379F70992B309AA500F872A5"
-            BuildableName = "NC2.app"
+            BuildableName = "Mealanner.app"
             BlueprintName = "NC2"
             ReferencedContainer = "container:NC2.xcodeproj">
          </BuildableReference>

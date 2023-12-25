@@ -9,6 +9,7 @@ import SwiftUI
 
         struct OnBordingView: View {
             @State var current = 0
+            @State private var isActive: Bool = false
             //@State var Show_sheet : Bool
            init(){
                 UIScrollView.appearance().bounces = false
@@ -17,7 +18,7 @@ import SwiftUI
             var body: some View {
                 //Text("Hello, World!")
                 
-                NavigationStack {
+                NavigationView {
                     ZStack{
                         Color("lColor")
                             .edgesIgnoringSafeArea(.all)
@@ -29,11 +30,13 @@ import SwiftUI
                                     self.current = onBording_set.count-1
                                     
                                     //هنا نخليه يدخل التطبيق مباشرة
-
+                                    
                                 }){
-                                    Text("Skip").padding(14).foregroundColor(.blue)
-                                        .offset(x: -25, y: 30)
-                                }}
+                                    NavigationLink(destination:   home().navigationBarBackButtonHidden(true)){
+                                        Text("Skip").padding(14).foregroundColor(.blue)
+                                            .offset(x: -25, y: 30)
+                                    }}
+                            }
                             TabView(selection: $current) {
                                 ForEach(0..<onBording_set.count, id: \.self) { item in
                                     VStack {
@@ -63,26 +66,37 @@ import SwiftUI
                             Button(action: {
                                 if (self.current < onBording_set.count - 1){
                                     self.current+=1
+                                } else if (self.current == 1){
+                                    isActive.toggle()
                                 }
+                                
                                 else {
                                     //Start navigation
                
-                              //  home()
+                                // home()
             
                                 }
                                 
                             }){
-                                Text(current < onBording_set.count-1 ? "Next" : "Get started" ).padding(16).frame(width: 250).background(Color("gColor")).cornerRadius(16).padding(.horizontal, 16).foregroundColor(.white)
-                                //background(Color("gColor"))
-                                
-                            }
+//                                NavigationLink(
+//                                        destination: DestinationView().navigationBarBackButtonHidden(true)
+//                                    ) {
+                                        Text(current < onBording_set.count - 1 ? "Next" : "Get started")
+                                            .padding(16)
+                                            .frame(width: 250)
+                                            .background(Color("gColor"))
+                                            .cornerRadius(16)
+                                            .padding(.horizontal, 16)
+                                            .foregroundColor(.white)
+                                    } .background(NavigationLink("", destination: home().navigationBarBackButtonHidden(true), isActive: $isActive))
+                        }
                             
                         }.offset(y : -30)
                     }
                     
                 }
             }
-        }
+        
 
         struct onBording_Struct {
             let Title : String
@@ -94,12 +108,12 @@ import SwiftUI
 let onBording_set = [
     onBording_Struct(
         Title: NSLocalizedString("Welcome to Mealanner", comment: ""),
-        description: NSLocalizedString("Your hub for healthy meals.\n Plan and savor the wellness!", comment: ""),
+        description: NSLocalizedString("Where meals planning is just a click away!", comment: ""),
         image: "bg"
     ), onBording_Struct(
         Title: NSLocalizedString("Stay remembered", comment: ""),
         description: NSLocalizedString("Let Mlanner's widget simplify your day of vitality with your meal planner.", comment: ""),
-        image: "bg"
+        image: "wid"
     ) ]
     
     

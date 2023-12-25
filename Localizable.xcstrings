@@ -132,7 +132,14 @@
       }
     },
     "Background" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخلفية"
+          }
+        }
+      }
     },
     "Breackfast:" : {
       "localizations" : {
@@ -205,13 +212,30 @@
       }
     },
     "Get started" : {
-
-    },
-    "Key 1" : {
-      "extractionState" : "manual"
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ"
+          }
+        }
+      }
     },
     "Let Mlanner's widget simplify your day of vitality with your meal planner." : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دع واجهة رسومات ميلانر تبسط يومك بتخطيط وجباتك!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let Mealanner's widget simplify your day by planning your meals."
+          }
+        }
+      }
     },
     "Lunch" : {
       "localizations" : {
@@ -234,13 +258,37 @@
       }
     },
     "Mealanner widget" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "واجهة رسومات ميلانر"
+          }
+        }
+      }
+    },
+    "Mealanner, where meal planning is just a click away." : {
 
     },
     "Next" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي"
+          }
+        }
+      }
     },
     "Skip" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تخطي"
+          }
+        }
+      }
     },
     "Snack" : {
       "localizations" : {
@@ -263,10 +311,14 @@
       }
     },
     "Stay remembered" : {
-
-    },
-    "This is a mealanner widget to remind you for your daily meals." : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابقَ متذكرًا"
+          }
+        }
+      }
     },
     "Type your breakfast" : {
       "localizations" : {
@@ -309,10 +361,31 @@
       }
     },
     "Welcome to Mealanner" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أهلًا بك في ميلانر"
+          }
+        }
+      }
     },
-    "Your hub for healthy meals.\n Plan and savor the wellness!" : {
-
+    "Where meals planning is just a click away!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حيث تخطيط الوجبات هو مجرد نقرة واحدة! "
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where meals planning is just a click away!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
